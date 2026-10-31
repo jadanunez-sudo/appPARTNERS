@@ -25,6 +25,7 @@ const QUESTIONS = [
   {
     "id": 3,
     "question": "La señal vertical reglamentaria R-6 ¿prohibido voltear a la izquierda¿, significa que:",
+     "image": "imagen/R-6.png",
     "options": [
       "Está prohibido voltear a la izquierda y, por lo tanto también está prohibido el giro en U.",
       "Está prohibido voltear a la izquierda, sin embargo, está permitido el giro en U.",
@@ -32,10 +33,13 @@ const QUESTIONS = [
       "Ninguna de las alternativas es correcta."
     ],
     "answer": "a"
+     
   },
   {
     "id": 4,
     "question": "La señal vertical reglamentaria R-3 significa que:",
+    "image": "imagen/R-3.png",
+     
     "options": [
       "Nos acercamos a una zona restringida al tránsito.",
       "Está permitido adelantar vehículos.",
@@ -43,6 +47,7 @@ const QUESTIONS = [
       "Ninguna de las alternativas es correcta"
     ],
     "answer": "c"
+    
   },
   {
     "id": 5,
@@ -91,6 +96,7 @@ const QUESTIONS = [
   {
     "id": 9,
     "question": "La siguiente señal vertical reglamentaria R-53:",
+     "image": "imagen/R-53.png",
     "options": [
       "Prohíbe estacionar.",
       "Prohíbe al conductor detener el vehículo dentro del área de la intersección.",
@@ -190,6 +196,7 @@ const QUESTIONS = [
   {
     "id": 18,
     "question": "La siguiente señal vertical reglamentaria (R-29):",
+     "image": "imagen/R-29.jpg",
     "options": [
       "Prohíbe el uso de la bocina en vías urbanas.",
       "Prohíbe el uso de la bocina en carreteras.",
@@ -300,6 +307,7 @@ const QUESTIONS = [
   {
     "id": 28,
     "question": "La siguiente señal vertical reglamentaria P-22C indica que:",
+     "image": "imagen/P-22C.png",
     "options": [
       "Está permitido adelantar.",
       "Se aproxima un carril adicional.",
@@ -344,6 +352,7 @@ const QUESTIONS = [
   {
     "id": 32,
     "question": "¿Cuál es la diferencia entre las señales P-2A y P-1A?",
+     "image": "imagen/P-1A Y2A.png",
     "options": [
       "No hay diferencia, se usan indistintamente.",
       "La señal P-2A se utiliza en situaciones de mayor riesgo.",
@@ -355,6 +364,7 @@ const QUESTIONS = [
   {
     "id": 33,
     "question": "¿Qué indica la señal R-30F?",
+     "image": "imagen/R-30F.png",
     "options": [
       "Tener precaución con vehículos lentos.",
       "Regula la velocidad máxima permitida en curvas.",
@@ -377,6 +387,7 @@ const QUESTIONS = [
   {
     "id": 35,
     "question": "Si dos vehículos se aproximan simultáneamente a una intersección no regulada (sin señalización) procedentes de vías diferentes, ¿quién tiene preferencia de paso?",
+     "image": "imagen/PRE35.png",
     "options": [
       "Cualquiera de los dos.",
       "El que se aproxime por la derecha del otro.",
@@ -729,6 +740,7 @@ const QUESTIONS = [
   {
     "id": 67,
     "question": "La señal preventiva P-33A, significa:",
+       "image": "imagen/P-33A.png",
     "options": [
       "Señal de curva sinuosa.",
       "Señal de proximidad a un badén.",
@@ -803,6 +815,7 @@ const QUESTIONS = [
     ],
     "answer": "c"
   },
+   
   {
     "id": 74,
     "question": "Si se aproxima a una zona escolar, ¿qué acción debe realizar?",
@@ -1015,6 +1028,7 @@ const QUESTIONS = [
   {
     "id": 93,
     "question": "Si un conductor que circula por el carril derecho de una vía se encuentra con las flechas inclinadas que se muestran en la figura, su conducta correcta es:",
+     "image": "imagen/PRE93.png",
     "options": [
       "Continuar la circulación por el carril en que se encuentra.",
       "Adelantar al vehículo que se encuentra delante de él y que circula por el carril izquierdo.",
@@ -1081,6 +1095,7 @@ const QUESTIONS = [
   {
     "id": 99,
     "question": "En el caso representado en el siguiente gráfico ¿el vehículo rojo puede rebasar al azul?",
+     "image": "imagen/PRE99.png",
     "options": [
       "Puede hacerlo si no viene un vehículo en el sentido contrario.",
       "Puede hacerlo solo si, el vehículo en sentido contrario está lejos y alcanza hacer la maniobra con seguridad.",
@@ -1092,6 +1107,7 @@ const QUESTIONS = [
   {
     "id": 100,
     "question": "La siguiente señal (R-17), significa:",
+    "image": "imagen/R-17.png",
     "options": [
       "Prohibido estacionar.",
       "Prohibida la circulación de vehículos automotores.",
@@ -1114,6 +1130,7 @@ const QUESTIONS = [
   {
     "id": 102,
     "question": "La siguiente señal (P-36), significa:",
+    "image": "imagen/P-36.png",
     "options": [
       "Proximidad de un túnel.",
       "Superficie deslizante.",
@@ -1125,6 +1142,7 @@ const QUESTIONS = [
   {
     "id": 103,
     "question": "La siguiente señal (R-14), significa:",
+    "image": "imagen/R-14.png",
     "options": [
       "Circular por el carril de la derecha.",
       "Circular por el carril central.",
@@ -1136,6 +1154,7 @@ const QUESTIONS = [
   {
     "id": 104,
     "question": "Si usted circula por una vía y se encuentra con la señal (R-11a) , ésta le indica:",
+    "image": "imagen/R-11A.png",
     "options": [
       "Que es una vía de tres carriles de un solo sentido.",
       "Que es una vía de tres carriles y usted puede utilizar solo uno de ellos.",
@@ -1147,6 +1166,7 @@ const QUESTIONS = [
   {
     "id": 105,
     "question": "La siguiente señal (R-30c) , significa:",
+    "image": "imagen/R-30C.png",
     "options": [
       "Que la velocidad máxima de la vía es de 50 km/h.",
       "Que la velocidad mínima de la vía es de 50 km/h.",
@@ -1158,6 +1178,7 @@ const QUESTIONS = [
   {
     "id": 106,
     "question": "La siguiente señal (R-5-4), significa:",
+    "image": "imagen/R-5-4.png",
     "options": [
       "Que la vía no continúa y los conductores deben girar a la izquierda.",
       "Que la intersección contempla giros tangentes a la izquierda en ambos sentidos.",
@@ -1169,6 +1190,7 @@ const QUESTIONS = [
   {
     "id": 107,
     "question": "La siguiente señal (R-9), significa:",
+    "image": "imagen/R-9.png",
     "options": [
       "Que no está permitido girar en U.",
       "Que está permitido el giro en U.",
@@ -1180,6 +1202,7 @@ const QUESTIONS = [
   {
     "id": 108,
     "question": "La siguiente señal (R-5-2), significa:",
+    "image": "imagen/R-5-2.jpg",
     "options": [
       "Que la vía solo permite girar a la izquierda.",
       "Prevención por bifurcación de la vía.",
@@ -1191,6 +1214,7 @@ const QUESTIONS = [
   {
     "id": 109,
     "question": "La siguiente señal (R-20), significa:",
+    "image": "imagen/R-20.png",
     "options": [
       "Que el peatón antes de cruzar debe mirar si se acercan autos por la derecha.",
       "Que el conductor que viene por la derecha debe tener cuidado con los peatones.",
@@ -1202,6 +1226,7 @@ const QUESTIONS = [
   {
     "id": 110,
     "question": "La siguiente señal (R-40), significa:",
+    "image": "imagen/R-40.png",
     "options": [
       "Crucero tipo cebra.",
       "Control policial.",
@@ -1213,6 +1238,7 @@ const QUESTIONS = [
   {
     "id": 111,
     "question": "La siguiente señal (R-48), significa:",
+    "image": "imagen/R-48.png",
     "options": [
       "Los peatones deben circular por la derecha y los camiones por la izquierda",
       "Los peatones deben tener cuidado con los camiones.",
@@ -1224,6 +1250,7 @@ const QUESTIONS = [
   {
     "id": 112,
     "question": "La siguiente señal (R-49), significa:",
+    "image": "imagen/R-49.png",
     "options": [
       "Está permitido cambiar de carril por la izquierda y por la derecha.",
       "Se debe mantener la distancia de seguridad entre vehículos.",
@@ -1235,6 +1262,7 @@ const QUESTIONS = [
   {
     "id": 113,
     "question": "La siguiente señal (R-50), significa:",
+    "image": "imagen/R-50.png",
     "options": [
       "Que si solo hay un carril tiene preferencia de paso el conductor que llegó primero.",
       "Que si solo hay un carril tiene preferencia el conductor que está mirando la señal.",
@@ -1246,6 +1274,7 @@ const QUESTIONS = [
   {
     "id": 114,
     "question": "La señal (R-5-1), es:",
+    "image": "imagen/R-5-1.png",
     "options": [
       "Una señal informativa.",
       "Una señal preventiva.",
@@ -1257,6 +1286,7 @@ const QUESTIONS = [
   {
     "id": 115,
     "question": "La señal (P-3a) , le indica al conductor que:",
+    "image": "imagen/P-3A.png",
     "options": [
       "Hay una curva y contra- curva a la izquierda.",
       "Hay una curva y contra- curva a la derecha.",
@@ -1268,6 +1298,7 @@ const QUESTIONS = [
   {
     "id": 116,
     "question": "La siguiente señal (P-5-1a) , le advierte al conductor que:",
+    "image": "imagen/P5-1A.png",
     "options": [
       "Se aproxima a una curva y contra-curva a la izquierda.",
       "Se aproxima a una curva y contra-curva a la derecha.",
@@ -1279,6 +1310,7 @@ const QUESTIONS = [
   {
     "id": 117,
     "question": "La siguiente señal (P-61), le advierte al conductor que:",
+    "image": "imagen/P-61.png",
     "options": [
       "El sentido del tránsito es el que indica la flecha.",
       "Se aproxima a una reducción de la vía en ambos sentidos.",
@@ -1290,6 +1322,7 @@ const QUESTIONS = [
   {
     "id": 118,
     "question": "La siguiente señal (P-34), le advierte al conductor que:",
+    "image": "imagen/P-34.png",
     "options": [
       "La vía está en mal estado y tiene baches.",
       "Se aproxima a un resalto.",
@@ -1301,6 +1334,7 @@ const QUESTIONS = [
   {
     "id": 119,
     "question": "La siguiente señal (P-60), es:",
+    "image": "imagen/P-60.png",
     "options": [
       "Una señal turística.",
       "Una señal informativa.",
@@ -1312,6 +1346,7 @@ const QUESTIONS = [
   {
     "id": 120,
     "question": "La siguiente señal (P-46), indica:",
+    "image": "imagen/P-46.png",
     "options": [
       "Existencia de una ciclovía.",
       "Autorización para el cruce de ciclistas.",
@@ -1323,6 +1358,7 @@ const QUESTIONS = [
   {
     "id": 121,
     "question": "La siguiente señal (P-46-a) , indica:",
+    "image": "imagen/P-46A.png",
     "options": [
       "Que los ciclistas deben usar la ciclovía.",
       "Que nos aproximamos a un cruce de ciclovía.",
@@ -1334,6 +1370,7 @@ const QUESTIONS = [
   {
     "id": 122,
     "question": "La siguiente señal (P-46b) , indica:",
+    "image": "imagen/P-46B.png",
     "options": [
       "Que los ciclistas deben detenerse en ese punto.",
       "Que nos aproximamos a un cruce de ciclovía.",
@@ -1345,6 +1382,7 @@ const QUESTIONS = [
   {
     "id": 123,
     "question": "La siguiente señal (P-48), indica:",
+    "image": "imagen/P-48.png",
     "options": [
       "Vía es de uso exclusivo de los peatones.",
       "Zona con presencia de peatones.",
@@ -1356,17 +1394,19 @@ const QUESTIONS = [
   {
     "id": 124,
     "question": "La siguiente señal (P-48a) , indica:",
+    "image": "imagen/P-48A.png",
     "options": [
       "Vía es de uso exclusivo de peatones.",
       "Proximidad a un cruce peatonal.",
       "Ubicación de un cruce escolar.",
       "Ninguna de las alternativas es correcta."
     ],
-    "answer": "b"
+     "answer": "b"
   },
   {
     "id": 125,
     "question": "La siguiente señal (P-48-b) , indica:",
+    "image": "imagen/P-48B.png",
     "options": [
       "Ubicación de un cruce escolar.",
       "Proximidad a una calzada.",
@@ -1378,6 +1418,7 @@ const QUESTIONS = [
   {
     "id": 126,
     "question": "La siguiente señal (P-49), indica:",
+    "image": "imagen/P-49.png",
     "options": [
       "Zona escolar.",
       "Proximidad a un cruce peatonal.",
@@ -1389,6 +1430,7 @@ const QUESTIONS = [
   {
     "id": 127,
     "question": "La siguiente señal (P-49a) , indica:",
+    "image": "imagen/P-49A.png",
     "options": [
       "Zona escolar.",
       "Proximidad a un cruce escolar.",
@@ -1400,6 +1442,7 @@ const QUESTIONS = [
   {
     "id": 128,
     "question": "La siguiente señal (P-49b) , indica:",
+    "image": "imagen/P-49B.png",
     "options": [
       "Zona transitada.",
       "Proximidad a un cruce peatonal.",
@@ -1411,6 +1454,7 @@ const QUESTIONS = [
   {
     "id": 129,
     "question": "La siguiente señal (P-50), indica:",
+    "image": "imagen/P-50.png",
     "options": [
       "Zona de deportes.",
       "Proximidad a campo deportivo.",
@@ -1422,6 +1466,7 @@ const QUESTIONS = [
   {
     "id": 130,
     "question": "La siguiente señal (P-51), indica:",
+    "image": "imagen/P-51.png",
     "options": [
       "Zona de parqueo de vehículos pesados.",
       "Proximidad a zona rural.",
@@ -1433,6 +1478,7 @@ const QUESTIONS = [
   {
     "id": 131,
     "question": "La siguiente señal (P-53), indica:",
+    "image": "imagen/P-53.png",
     "options": [
       "Proximidad a un establo.",
       "Proximidad a zona agrícola.",
@@ -1444,6 +1490,7 @@ const QUESTIONS = [
   {
     "id": 132,
     "question": "La siguiente señal (P-55), indica:",
+    "image": "imagen/P-55.png",
     "options": [
       "Semáforo malogrado.",
       "Proximidad a un semáforo.",
@@ -1455,6 +1502,7 @@ const QUESTIONS = [
   {
     "id": 133,
     "question": "La siguiente señal (P-58), le indica:",
+    "image": "imagen/P-58.png",
     "options": [
       "Que usted se aproxima a una señal de PARE.",
       "Que usted debe parar donde está la señal P-58.",
@@ -1466,6 +1514,7 @@ const QUESTIONS = [
   {
     "id": 134,
     "question": "La siguiente señal (P-59), le indica:",
+    "image": "imagen/P-59.png",
     "options": [
       "Que usted se aproxima a una señal de CEDA EL PASO.",
       "Que usted debe ceder el paso donde está la señal P- 59.",
@@ -1477,6 +1526,7 @@ const QUESTIONS = [
   {
     "id": 135,
     "question": "La siguiente señal (P-41), le indica:",
+    "image": "imagen/P-41.png",
     "options": [
       "Que usted se aproxima a una zona de camiones.",
       "Que usted debe encender sus luces pues se aproxima a una zona con poca visibilidad.",
@@ -1488,6 +1538,7 @@ const QUESTIONS = [
   {
     "id": 136,
     "question": "La siguiente señal (P-45), indica:",
+    "image": "imagen/P-45.png",
     "options": [
       "Proximidad a un aeropuerto.",
       "Proximidad a una pista de aviones.",
@@ -1499,6 +1550,7 @@ const QUESTIONS = [
   {
     "id": 137,
     "question": "La siguiente señal (P-52), le indica:",
+    "image": "imagen/P-52.png",
     "options": [
       "Que usted debe dar prioridad de paso a las ambulancias.",
       "Que usted debe dar prioridad de paso a los bomberos.",
@@ -1510,6 +1562,7 @@ const QUESTIONS = [
   {
     "id": 138,
     "question": "La siguiente señal (P-66), le indica:",
+    "image": "imagen/P-66.png",
     "options": [
       "Que se aproxima un desierto.",
       "Que se aproxima una zona donde hay ráfagas de viento lateral.",
@@ -1521,6 +1574,7 @@ const QUESTIONS = [
   {
     "id": 139,
     "question": "La siguiente señal (P-66a) , le indica:",
+    "image": "imagen/P-66A.png",
     "options": [
       "Que se aproxima una tormenta.",
       "Que está pasando por una zona donde hay ráfagas de viento lateral.",
@@ -1532,6 +1586,7 @@ const QUESTIONS = [
   {
     "id": 140,
     "question": "Si al conducir su vehículo se encuentra con la señal vertical que se muestra, usted debe entender que:",
+     "image": "imagen/PRE140.png",
     "options": [
       "La vía está interrumpida y debe tomar el camino alternativo que muestra la señal.",
       "En la siguiente intersección está prohibido girar a la izquierda y por lo tanto, si desea seguir esa ruta debe tomar el camino alternativo que muestra la señal.",
@@ -1543,6 +1598,7 @@ const QUESTIONS = [
   {
     "id": 141,
     "question": "Si al conducir su vehículo se encuentra con la señal vertical que se muestra, usted debe entender que:",
+     "image": "imagen/PRE141.png",
     "options": [
       "Si quiere girar a la izquierda debe pasar la intersección y dar la vuelta a la manzana.",
       "En la siguiente intersección está prohibido girar a la izquierda y por lo tanto, si desea seguir esa ruta debe hacerlo una cuadra antes.",
@@ -1554,6 +1610,7 @@ const QUESTIONS = [
   {
     "id": 142,
     "question": "La siguiente señal (I-14), significa:",
+    "image": "imagen/I-14.png",
     "options": [
       "Señal de hostal.",
       "Señal de hospedaje.",
@@ -1565,6 +1622,7 @@ const QUESTIONS = [
   {
     "id": 143,
     "question": "La siguiente señal (I-31), significa:",
+    "image": "imagen/I-31.png",
     "options": [
       "Proximidad de una bahía de taxis.",
       "Proximidad a un estacionamiento permitido.",
@@ -1576,6 +1634,7 @@ const QUESTIONS = [
   {
     "id": 144,
     "question": "La siguiente señal (I-9), significa:",
+    "image": "imagen/I-9.png",
     "options": [
       "Zona de control policial.",
       "Zona de control de aduanas.",
@@ -1587,6 +1646,7 @@ const QUESTIONS = [
   {
     "id": 145,
     "question": "La siguiente señal (I-18), se utiliza para indicar:",
+    "image": "imagen/I-18.png",
     "options": [
       "Cercanía a una ferretería.",
       "Cercanía a un servicio mecánico.",
@@ -1598,6 +1658,7 @@ const QUESTIONS = [
   {
     "id": 146,
     "question": "La siguiente señal (I-19), se utiliza para indicar:",
+    "image": "imagen/I-19.png",
     "options": [
       "Cercanía a un servicio mecánico.",
       "Cercanía a una tienda.",
@@ -1609,6 +1670,7 @@ const QUESTIONS = [
   {
     "id": 147,
     "question": "La siguiente señal (I-20), se utiliza para indicar:",
+    "image": "imagen/I-20.png",
     "options": [
       "Cercanía a un servicio mecánico.",
       "Cercanía a una zona donde debe circular con cadenas en las llantas.",
@@ -1620,6 +1682,7 @@ const QUESTIONS = [
   {
     "id": 148,
     "question": "La siguiente señal (R-16a) , se utiliza para indicar:",
+    "image": "imagen/R-16A.png",
     "options": [
       "Fin de la restricción de circulación de automotores.",
       "Fin de la restricción de prohibido adelantar.",
@@ -1653,6 +1716,7 @@ const QUESTIONS = [
   {
     "id": 151,
     "question": "La siguiente señal (P-61), muestra:",
+    "image": "imagen/P-61.png",
     "options": [
       "Flechas retroreflectivas que indican peligro.",
       "Delineadores de curva, que guían al conductor.",
@@ -1983,6 +2047,7 @@ const QUESTIONS = [
   {
     "id": 181,
     "question": "La siguiente señal (P-15), se utiliza para advertir al conductor:",
+    "image": "imagen/P-15.png",
     "options": [
       "La proximidad a una vía de tres carriles.",
       "La proximidad a un huracán.",
@@ -1994,6 +2059,7 @@ const QUESTIONS = [
   {
     "id": 182,
     "question": "La siguiente señal (P-31a) , indica:",
+    "image": "imagen/P-31A.png",
     "options": [
       "La proximidad del final de la vía.",
       "La proximidad de una vía asfaltada.",
@@ -2049,6 +2115,7 @@ const QUESTIONS = [
   {
     "id": 187,
     "question": "¿Cuál es la acción correcta del conductor, según las normas de tránsito, en la situación que plantea el siguiente gráfico?",
+     "image": "imagen/PRE187.png",
     "options": [
       "Girar rápidamente a la derecha antes que el peatón cruce la calzada.",
       "Dar preferencia de paso al peatón para que cruce la calzada.",
@@ -2159,6 +2226,7 @@ const QUESTIONS = [
   {
     "id": 197,
     "question": "El siguiente gráfico muestra:",
+     "image": "imagen/PRE197.png",
     "options": [
       "Señalización de tránsito vertical y horizontal en una zona escolar.",
       "Únicamente señalización de tránsito vertical en una zona escolar.",
@@ -2181,6 +2249,7 @@ const QUESTIONS = [
   {
     "id": 199,
     "question": "Si al conducir en una intersección se encuentra con las siguientes marcas en el pavimento (malla ortogonal de color amarillo), significa:",
+     "image": "imagen/PRE199.png",
     "options": [
       "Que no puede detener el vehículo dentro del área de intersección.",
       "Que se están realizando trabajos de emergencia en el área demarcada.",
@@ -2192,6 +2261,7 @@ const QUESTIONS = [
   {
     "id": 200,
     "question": "De acuerdo al siguiente gráfico, es correcto afirmar que:",
+    "image": "imagen/PRE200.png",
     "options": [
       "La zona que permite adelantar inicia con las líneas amarillas continuas.",
       "Los conductores pueden estacionarse al empezar las líneas continuas.",
