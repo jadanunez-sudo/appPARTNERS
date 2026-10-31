@@ -1,0 +1,247 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Plataforma de simulacros de examen de manejo Categoría A-I">
+  <title>Simulacros de Manejo | Categoría A-I</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app-shell">
+
+    <!-- INICIO DE SESIÓN -->
+    <section id="loginScreen" class="login-layout">
+      <div class="login-brand">
+        <div class="brand-mark">A-I</div>
+        <span class="eyebrow">PLATAFORMA DE EVALUACIÓN</span>
+        <h1>Prepárate para<br><span>conducir seguro.</span></h1>
+        <p>Practica, mide tus conocimientos y llega mejor preparado a tu evaluación de manejo.</p>
+
+        <div class="login-facts">
+          <div><strong>200</strong><span>preguntas del balotario</span></div>
+          <div><strong>40</strong><span>preguntas por simulacro</span></div>
+          <div><strong>40 min</strong><span>por evaluación</span></div>
+        </div>
+      </div>
+
+      <div class="login-panel">
+        <div class="login-card">
+          <div class="small-logo">A-I <span>SIMULACROS</span></div>
+          <h2>Bienvenido</h2>
+          <p class="muted">Ingresa tus credenciales para comenzar.</p>
+
+          <form id="loginForm">
+            <label for="username">Usuario</label>
+            <input id="username" name="username" autocomplete="username" placeholder="Ingresa tu usuario" required>
+
+            <label for="password">Contraseña</label>
+            <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Ingresa tu contraseña" required>
+
+            <p id="loginError" class="error-message" role="alert"></p>
+
+            <button class="button button-primary button-full" type="submit">
+              Ingresar <span>→</span>
+            </button>
+          </form>
+
+          <p class="login-footnote">Acceso para alumnos autorizados</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PANEL PRINCIPAL -->
+    <section id="dashboardScreen" class="dashboard hidden">
+      <header class="topbar">
+        <div class="small-logo">A-I <span>SIMULACROS</span></div>
+        <div class="topbar-right">
+          <span class="user-chip"><span class="online-dot"></span> partners</span>
+          <button id="logoutButton" class="text-button">Cerrar sesión</button>
+        </div>
+      </header>
+
+      <div class="welcome-block">
+        <span class="eyebrow">CATEGORÍA A-I · CLASE A</span>
+        <h1>Tu próximo paso es <span>estar preparado.</span></h1>
+        <p>Realiza simulacros de 40 preguntas seleccionadas aleatoriamente del balotario.</p>
+      </div>
+
+      <div class="dashboard-grid">
+        <article class="start-card">
+          <div class="start-card-icon">✓</div>
+          <span class="eyebrow">EVALUACIÓN DE CONOCIMIENTOS</span>
+          <h2>Simulacro de examen</h2>
+          <p>Responde cada pregunta con atención. Al finalizar, conocerás tu puntaje y podrás revisar tus respuestas incorrectas.</p>
+
+          <div class="exam-specs">
+            <div><strong>40</strong><span>Preguntas</span></div>
+            <div><strong>40 min</strong><span>Tiempo límite</span></div>
+            <div><strong>200</strong><span>Del balotario</span></div>
+          </div>
+
+          <button id="startButton" class="button button-primary">
+            Comenzar simulacro <span>→</span>
+          </button>
+        </article>
+
+        <aside class="info-card">
+          <div class="info-icon">i</div>
+          <h3>Antes de comenzar</h3>
+          <ul>
+            <li>El tiempo empieza al iniciar el simulacro.</li>
+            <li>Puedes avanzar y regresar entre preguntas.</li>
+            <li>El examen se entrega automáticamente al llegar a cero.</li>
+            <li>Al finalizar podrás revisar los errores y sus respuestas correctas.</li>
+          </ul>
+          <div class="source-note">
+            <strong>Fuente:</strong> balotario adjunto de Clase A - Categoría I.
+          </div>
+        </aside>
+      </div>
+
+      <p class="dashboard-bottom">Practica con responsabilidad. La seguridad vial comienza con tus conocimientos.</p>
+    </section>
+
+    <!-- PANTALLA DEL EXAMEN -->
+    <section id="examScreen" class="exam-screen hidden">
+      <header class="exam-topbar">
+        <div class="small-logo">A-I <span>SIMULACROS</span></div>
+
+        <div class="timer-wrap">
+          <span class="timer-label">TIEMPO RESTANTE</span>
+          <strong id="timer">40:00</strong>
+        </div>
+
+        <button id="finishTopButton" class="button button-outline">Finalizar examen</button>
+      </header>
+
+      <div class="exam-heading">
+        <div>
+          <span class="eyebrow">EVALUACIÓN EN CURSO</span>
+          <h1>Simulacro de manejo</h1>
+        </div>
+        <div class="question-count">
+          <strong id="answeredCount">0</strong>
+          <span>de 40 respondidas</span>
+        </div>
+      </div>
+
+      <div class="progress-track">
+        <div id="progressBar" class="progress-fill"></div>
+      </div>
+
+      <div class="exam-layout">
+        <article class="question-card">
+          <div class="question-meta">
+            <span id="questionNumber">PREGUNTA 01 DE 40</span>
+            <span class="question-tag">Categoría A-I</span>
+          </div>
+
+          <h2 id="questionText"></h2>
+
+          <div id="optionsContainer" class="options-list"></div>
+
+          <div class="question-actions">
+            <button id="previousButton" class="button button-outline">← Anterior</button>
+            <button id="nextButton" class="button button-primary">Siguiente →</button>
+          </div>
+        </article>
+
+        <aside class="question-nav-card">
+          <h3>Preguntas</h3>
+          <p>Selecciona un número para ir directamente.</p>
+
+          <div id="questionGrid" class="question-grid"></div>
+
+          <div class="legend">
+            <span><i class="legend-current"></i>Actual</span>
+            <span><i class="legend-answered"></i>Respondida</span>
+            <span><i class="legend-empty"></i>Pendiente</span>
+          </div>
+
+          <button id="finishButton" class="button button-dark button-full">
+            Terminar simulacro
+          </button>
+        </aside>
+      </div>
+
+      <p class="exam-disclaimer">
+        Si el tiempo llega a cero, tus respuestas se enviarán automáticamente.
+      </p>
+    </section>
+
+    <!-- PANTALLA DE RESULTADOS -->
+    <section id="resultScreen" class="result-screen hidden">
+      <header class="topbar">
+        <div class="small-logo">A-I <span>SIMULACROS</span></div>
+        <button id="logoutResultButton" class="text-button">Cerrar sesión</button>
+      </header>
+
+      <div class="result-header">
+        <span class="eyebrow">EVALUACIÓN FINALIZADA</span>
+        <h1>Resultado del simulacro</h1>
+        <p id="resultMessage">Aquí tienes el resumen de tu evaluación.</p>
+      </div>
+
+      <div class="result-summary">
+        <div class="score-card">
+          <span>PUNTAJE</span>
+          <strong id="scoreValue">0/40</strong>
+          <small id="scorePercent">0% de respuestas correctas</small>
+        </div>
+
+        <div class="metric-card">
+          <span class="metric-icon good">✓</span>
+          <strong id="correctValue">0</strong>
+          <small>Respuestas correctas</small>
+        </div>
+
+        <div class="metric-card">
+          <span class="metric-icon bad">×</span>
+          <strong id="wrongValue">0</strong>
+          <small>Respuestas incorrectas</small>
+        </div>
+
+        <div class="metric-card">
+          <span class="metric-icon neutral">—</span>
+          <strong id="blankValue">0</strong>
+          <small>Sin responder</small>
+        </div>
+      </div>
+
+      <div class="review-heading">
+        <div>
+          <span class="eyebrow">APRENDE DE TUS ERRORES</span>
+          <h2>Revisión de respuestas incorrectas</h2>
+        </div>
+        <span id="wrongBadge" class="wrong-badge">0 errores</span>
+      </div>
+
+      <div id="wrongAnswers" class="wrong-list"></div>
+
+      <div class="result-actions">
+        <button id="newExamButton" class="button button-primary">
+          Realizar otro simulacro <span>→</span>
+        </button>
+        <button id="backDashboardButton" class="button button-outline">
+          Volver al inicio
+        </button>
+      </div>
+
+      <p class="dashboard-bottom">
+        Sigue practicando para fortalecer tus conocimientos de seguridad vial.
+      </p>
+    </section>
+
+  </main>
+
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
