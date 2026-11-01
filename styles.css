@@ -1302,3 +1302,113 @@ button {
     font-size: 16px;
   }
 }
+
+
+/* VENTANA DE APROBACIÓN */
+#approvalScreen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 20px;
+}
+
+#approvalScreen.hidden {
+  display: none;
+}
+
+#approvalBox {
+  width: 100%;
+  max-width: 450px;
+  padding: 40px 25px;
+  background: white;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  animation: approvalAppear 0.5s ease;
+}
+
+#approvalTitle {
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+#approvalMessage {
+  font-size: 23px;
+  font-weight: bold;
+}
+
+#approvalScore {
+  font-size: 48px;
+  font-weight: 900;
+  margin: 20px 0;
+}
+
+#approvalScreen.approved #approvalTitle,
+#approvalScreen.approved #approvalMessage,
+#approvalScreen.approved #approvalScore {
+  color: #159447;
+}
+
+#approvalScreen.failed #approvalTitle,
+#approvalScreen.failed #approvalMessage,
+#approvalScreen.failed #approvalScore {
+  color: #e53935;
+}
+
+@keyframes approvalAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#approvalImage {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  display: block;
+  margin: 15px auto;
+}
+
+/* ANIMACION A LA IMAGEN APROBADO Y DESAPROBADO*/
+#approvalImage {
+  width: 180px;
+  height: 180px;
+  object-fit: contain;
+  display: block;
+  margin: 15px auto;
+}
+
+/* Animación de entrada */
+#approvalImage.animar {
+  animation: zoomRebote 1s ease-in-out;
+}
+
+@keyframes zoomRebote {
+  0% {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+
+  80% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

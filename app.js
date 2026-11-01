@@ -9,6 +9,7 @@ const PASSWORD = "20141010";
 const EXAM_SIZE = 40;
 const EXAM_SECONDS = 40 * 60;
 const LETTERS = ["a", "b", "c", "d"];
+const approvalImage = document.getElementById("approvalImage");
 
 // ==========================================
 // PANTALLAS
@@ -19,7 +20,8 @@ const screens = {
   dashboard: document.getElementById("dashboardScreen"),
   exam: document.getElementById("examScreen"),
   result: document.getElementById("resultScreen"),
-  reading: document.getElementById("readingScreen")
+  reading: document.getElementById("readingScreen"),
+  approval: document.getElementById("approvalScreen"),
 };
 
 let examQuestions = [];
@@ -648,6 +650,63 @@ function finishExam(timeExpired) {
       wrongContainer.appendChild(card);
     });
   }
+// ==========================================
+// VENTANA DE APROBADO O DESAPROBADO
+// ==========================================
 
+const approvalScreen = document.getElementById("approvalScreen");
+const approvalTitle = document.getElementById("approvalTitle");
+const approvalMessage = document.getElementById("approvalMessage");
+const approvalScore = document.getElementById("approvalScore");
+
+function mostrarImagenAnimada(ruta) {
+  approvalImage.classList.remove("animar");
+
+  // Reinicia la animación
+  void approvalImage.offsetWidth;
+
+  approvalImage.src = ruta;
+
+  approvalImage.onload = () => {
+    approvalImage.classList.add("animar");
+  };
+}
+// Condición: 35 a 40 respuestas correctas
+if (correct >= 35) {
+  approvalScreen.classList.remove("failed");
+  approvalScreen.classList.add("approved");
+
+  approvalTitle.textContent = "¡APROBASTE!";
+  approvalMessage.textContent = "¡FELICITACIONES!";
+
+ /*  approvalImage.src = "./imagen/aprobado.png";
+  approvalMessage.alt = "Examen aprobado";*/
+   mostrarImagenAnimada("imagen/aprobado.png");
+
+
+} else {
+  approvalScreen.classList.remove("approved");
+  approvalScreen.classList.add("failed");
+
+  approvalTitle.textContent = "¡DESAPROBASTE!";
+  approvalMessage.textContent = "¡SIGUE INTENTANDO!";
+
+  /* approvalImage.src = "./imagen/desaprobado.png";
+  approvalMessage.alt = "Examen desaprobado";*/
+   mostrarImagenAnimada("imagen/desaprobado.png");
+}
+
+
+// Mostrar puntaje
+approvalScore.textContent = `${correct} / 40`;
+
+// Mostrar ventana
+showScreen("approval");
+approvalScreen.classList.add(correct >= 35 ? "approved" : "failed");
+
+// Esperar 10 segundos y mostrar resultados
+setTimeout(() => {
+  approvalScreen.classList.add("hidden");
   showScreen("result");
+}, 5000);
 }

@@ -553,6 +553,7 @@ const QUESTIONS = [
   {
     "id": 50,
     "question": "La siguiente señal vertical reglamentaria P-17A, indica:",
+    "image": "imagen/P-17A.png",
     "options": [
       "Reducción de la calzada al lado derecho.",
       "Reducción de la calzada al lado izquierdo.",
@@ -1119,6 +1120,7 @@ const QUESTIONS = [
   {
     "id": 101,
     "question": "Si usted se encuentra conduciendo su vehículo por una vía y antes de cruzar la intersección se encuentra con la señal R-4, esta le indica:",
+    "image": "imagen/R-4.png",
     "options": [
       "Que la calle está clausurada.",
       "Que está por ingresar a una vía de sentido contrario y no debe entrar.",
