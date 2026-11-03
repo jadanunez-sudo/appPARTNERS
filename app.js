@@ -3,8 +3,8 @@
 // CONFIGURACIÓN
 // ==========================================
 
-const USERNAME = "BrevetesMary";
-const PASSWORD = "202612";
+const USERNAME = "partners";
+const PASSWORD = "20141010";
 
 const EXAM_SIZE = 40;
 const EXAM_SECONDS = 40 * 60;
