@@ -1423,3 +1423,46 @@ button {
     transform: scale(1);
   }
 }
+
+/*LA CONFIGURACIÓN DEL NUMERO DE WHASSAP AL COSTADO DEL LOGO*/
+
+/* Logo y WhatsApp uno al costado del otro */
+.encabezado-contacto {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+/* Logo PARTNERS */
+.encabezado-contacto .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* WhatsApp */
+.
+/* WhatsApp: icono y número en horizontal */
+.encabezado-contacto .contacto-whatsapp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #10213b;
+}
+
+/* Icono de WhatsApp más pequeño */
+.encabezado-contacto .whatsapp-icono {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+}
+
+/* Número al costado del icono */
+.encabezado-contacto .contacto-whatsapp span {
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+}
