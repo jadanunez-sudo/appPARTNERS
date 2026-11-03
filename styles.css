@@ -1139,6 +1139,17 @@ button {
     box-shadow: none;
     border-radius: 0;
 }
+.logoprincipal img {
+   width: 200px;
+    height: auto;
+    display: block;
+    margin: 0;
+    background: transparent;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    border-radius: 0;
+}
 
 
 
