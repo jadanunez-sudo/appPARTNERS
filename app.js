@@ -49,26 +49,40 @@ function showScreen(name) {
   window.scrollTo({ top: 0, behavior: "instant" });
 }
 
+
 // ==========================================
 // INICIAR SESIÓN
+// ACEPTAR MAYÚSCULAS Y MINÚSCULAS
 // ==========================================
 
 document.getElementById("loginForm").addEventListener("submit", event => {
-  event.preventDefault();
 
-  const username = document.getElementById("username").value.trim();
-  const password = document.getElementById("password").value;
-  const error = document.getElementById("loginError");
+    event.preventDefault();
 
-  if (username === USERNAME && password === PASSWORD) {
-    error.textContent = "";
-    document.getElementById("loginForm").reset();
-    showScreen("dashboard");
-  } else {
-    error.textContent =
-      "Usuario o contraseña incorrectos. Inténtalo nuevamente.";
-  }
+    const username = document.getElementById("username")
+        .value.trim().toLowerCase();
+
+    const password = document.getElementById("password").value;
+
+    const error = document.getElementById("loginError");
+
+    if (username === USERNAME && password === PASSWORD) {
+
+        error.textContent = "";
+
+        document.getElementById("loginForm").reset();
+
+        showScreen("dashboard");
+
+    } else {
+
+        error.textContent =
+            "Usuario o contraseña incorrectos. Inténtalo nuevamente.";
+
+    }
+
 });
+
 
 // ==========================================
 // CERRAR SESIÓN
